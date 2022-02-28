@@ -1,0 +1,9 @@
+version: '3.0'
+
+services:
+  desafio_golang_fc:
+    build: 
+      context: ./
+    image: raphaelferrao/golang:desafiofc
+    container_name: desafio_golang_fc
+
