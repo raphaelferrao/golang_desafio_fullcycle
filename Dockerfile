@@ -8,7 +8,7 @@ RUN go mod download && go mod verify
 COPY full-cycle.go app.go
 RUN go build -v -o /usr/local/bin/app app.go
 
-FROM busybox:1.34
+FROM scratch
 
 COPY --from=builder /usr/local/bin/app /go/bin/
 EXPOSE 3000
